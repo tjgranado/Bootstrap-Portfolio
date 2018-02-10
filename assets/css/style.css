@@ -1,16 +1,27 @@
 .container {
-    width: 100%;
     max-width: 960px;
     margin: 0 auto;
     clear: both;
   }
+
+body {
+  padding: 50px;
+}
+
+.fullImage {
+  float: left;
+  width: 200px;
+  height: auto;
+  margin-top: 10px;
+  margin-right: 25px;
+}
 
 #logo {
     float: left;
     width: 250px;
     height: 90px;
     font-family: Georgia, Times, "Times New Roman", serif;
-    font-size: 30px;
+    font-size: 20px;
     font-weight: 700;
     line-height: 90px;
     color: #fff;
@@ -20,7 +31,7 @@
   }
 
 #heading {
-    position: fixed;
+    position: fixed bottom;
     z-index: 99;
     width: 100%;
     margin: 0 0 20px;
@@ -44,3 +55,45 @@ nav {
     text-decoration: none;
     border-left: 1px solid #efefef;
   }
+
+  #navbar {
+    position: fixed;
+    top: 0px;
+    left: 10px;
+
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 250px);  /* 3 columns */
+    grid-template-rows: repeat(3, 250px); /* 3 rows  */
+    grid-gap:50px 30px; /* 50 pixels of space added between rows and 30 pixels added between columns  */
+  }
+
+  .grid-item {
+    border:thin gray solid;
+    padding:10px;
+  }
+  
+  #image {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .form {
+    padding: 20px;
+    width: 750px;
+    margin-left: 5%;
+    right: 50%;
+    border: 1px solid white;
+    border-radius: 3px;
+}
+
+@media screen and (max-width:950px){
+    .container {
+      width: 100%;
+    }
+    img {
+      width: 100%;
+    }
+}
